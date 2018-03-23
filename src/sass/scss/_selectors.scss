@@ -1,0 +1,166 @@
+@font-face {
+    font-family: Pompadur; /* Имя шрифта */
+    src: url(/fonts/pompadur.ttf); /* Путь к файлу со шрифтом */
+  }
+
+html{
+    font-size: 18px;
+}
+
+body{
+    font-size: percentage(5/7);
+}
+
+.hp {
+    font-family: Pompadur, cursive;
+    font-size: 2.3em;
+}
+.face {
+    font: 1.3rem/1.4 Pompadur;
+}
+p {
+    font-family: arial, helvetica, sans-serif;
+    font-weight: 600; /* Жирное начертание */
+    line-height: 1.2; /* Межстрочный интервал */
+}
+
+.h1 {
+    text-transform: uppercase;
+    color: lightblue;
+    background-color: RGB(249, 201, 16); /* Цвет фона под заголовком */
+    
+}
+
+.h2 {
+    text-transform: uppercase;
+    color: hsl(0, 100%, 50%);
+    background-color: hsla(56, 86%, 77%, 0.5); /* Цвет фона под заголовком */
+    
+}
+
+.h3 {
+    text-transform: uppercase;
+    font-family: arial, helvetica, sans-serif;
+    color: hsl(0, 100%, 50%);
+    background-color: hsla(56, 86%, 77%, 0.5); /* Цвет фона под заголовком */
+    
+}
+
+.h4 {
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Georgia, serif;
+    color: hsl(140, 100%, 50%);
+    background-color: hsla(6, 86%, 7%, 0.5); /* Цвет фона под заголовком */
+    
+}
+
+.h5 {
+    text-transform: uppercase;
+    font-family: 'Courier New', 'Lucida Console', Monospace;
+    color: hsl(240, 100%, 50%);
+    background-color: hsla(240, 86%, 70%, 0.5); /* Цвет фона под заголовком */
+    
+}
+
+.h6 {
+    text-transform: uppercase;
+    font-family: Raleway, Georgia, serif;
+    font-size: large;
+    color: hsl(10, 100%, 50%);
+    background-color: hsla(40, 86%, 70%, 0.5); /* Цвет фона под заголовком */
+    
+}
+.raleway{
+    font: 1.2rem/1.3 Raleway;
+}
+ 	
+
+.serif{
+    font-family: 'Times New Roman', Georgia, serif;
+}
+
+.mono{
+    font-family: 'Courier New', 'Lucida Console', Monospace;
+}
+
+p.first a {
+    color: green;
+}
+
+
+.wrapper {
+    font-size: 20px;
+    background: #0CC;
+    
+    span {
+        
+        font-size: 0.5em;
+        background: #FC9;
+
+        i {
+            font-size: 1.5em;
+            background: yellow;
+        }
+    }
+}
+
+
+.text{
+    text-align-last: start;
+    // letter-spacing: 0.2em;
+
+    .decor{
+        padding: 10px;
+        text-decoration: underline;
+        text-decoration-color: #000000;
+    }
+    .decors{
+        text-decoration-color: #f26122;
+        text-decoration-line: line-through;
+    }
+
+    .decorst {
+        text-decoration: underline;
+        text-decoration-color: #084ca1;
+        text-decoration-style: wavy;
+    }
+      
+}
+
+.circle{
+    display: list-item;
+    list-style-type:circle;
+}
+
+.disc{
+    display: list-item;
+    list-style-type:disc;
+}
+
+.square{
+    display: list-item;
+    list-style-type:square;
+}
+
+.greek{
+    display: list-item;
+    list-style-type:lower-greek;
+}
+
+.menu {
+    list-style: none;
+    
+    li {
+        display: inline-block;
+        a{
+            color: #424652;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        
+        a:hover{
+           color: #8bc6db;
+        }
+    }
+    
+}

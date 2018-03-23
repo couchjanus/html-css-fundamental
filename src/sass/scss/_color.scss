@@ -1,0 +1,40 @@
+//Color Variables
+$primary-color: #333;
+$primary-bg-color: #ddd;
+$maroon: #903749; //Maroon
+$red: #E83b24; //Red
+$plum: #53354A; //Plum
+$light-grey: #ddd;
+
+
+@mixin setColor($color){
+	.title{
+		background: $color;
+	}
+	.subtitle:after{
+		color: white;
+	}
+	&:hover .subtitle:after{
+		color: $color;
+	}
+  }
+  
+  .red{
+	@include setColor(#DC514E);
+  }
+  
+  .green{
+	@include setColor(#2ecc71);
+  }
+  
+  .gray{
+	@include setColor(#95a5a6);
+  }
+  
+  .yellow{
+	@include setColor(#f1c40f);
+  }
+  
+  .blue{
+	@include setColor(#3498db);
+  }
