@@ -4,6 +4,7 @@ const gulp = require('gulp');
 
 const watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
+    plumber = require('gulp-plumber'), // plumber() - не выбрасывать из компилятора если есть ошибки
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
@@ -54,9 +55,11 @@ var path = {
             .pipe(reload({stream: true}));
     });
     
+    // errLogToConsole: true - выводить номер строки в которой допущена ошибка
     
     gulp.task('style:build', function () {
-        gulp.src(path.src.style) 
+        gulp.src(path.src.style)
+            .pipe(plumber())
             .pipe(sourcemaps.init())
             .pipe(sass({
                 sourceMap: true,
@@ -75,7 +78,6 @@ var path = {
         'style:build',
     ]);
     
-    
     gulp.task('watch', function(){
         watch([path.watch.html], function(event, cb) {
             gulp.start('html:build');
@@ -86,11 +88,4 @@ var path = {
     });
     
     gulp.task('default', ['build', 'webserver', 'watch']);
-    
-
-// Задачи Gulp:
-
-gulp.task('hello', function() {
-    console.log('Hello Gulp');
-});
  
