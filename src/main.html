@@ -14,6 +14,82 @@
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="/css/main.css">
+
+        <style>
+            .outline a {
+                border: 1px solid;
+                border-radius: 3px;
+                display: inline-block;
+                margin: 10px;
+                padding: 5px;
+                }
+
+            .outline a:focus {
+                
+                outline: solid;
+
+                /* outline: 4px dotted #e73;
+                outline: dashed red;
+                outline: 1rem solid;
+                outline: thick double #32a1ce; */
+                
+                /* outline: 8px ridge rgba(170, 50, 220, .6);
+                border-radius: 2rem; */
+
+                outline-offset: 4px;
+                background: #ffa;
+
+            }
+
+            .content{
+                float:left;
+                border: 1px solid #ccc;
+                border-radius:10px;
+                padding:0 20px 20px 20px;
+            }
+
+            article{
+                border-bottom:1px dotted #ccc;
+                padding:10px 0 20px 0;
+            }
+
+            article img{
+                width:100%;
+            }
+
+            artlce h2{
+                margin:0;
+                padding-top:10px;
+            }
+
+            article .meta{
+                margin:10px 0 10px 0;
+                padding:5px;
+                background:#333;
+                color:#fff;
+            }
+
+            article .meta span{
+                float:right;
+            }
+
+            article .readmore{
+                background:#f4f4f4;
+                color:#000;
+                width:97%;
+                display:block;
+                text-align:center;
+                padding:10px;
+                border:1px solid #ccc;
+                border-radius:10px;
+            }
+
+            article .readmore:hover{
+                background:#ccc;
+            }
+
+
+        </style>
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -30,29 +106,42 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-
-        <ul class="categories">
+        <!-- Add your site or application content here -->
+        <div class="container"
+        
+        <main class="row">
+            <section class="col-s-9 content" id="">
+                <article>
+                    <header>
+                        <h2>Friend-tracking feature</h2>
+                        <div class="meta">
+                            Posted By <strong>Janus Nic 1 Day Ago</strong> <span>(2 Comments)</span>
+                        </div><!-- meta-->
+                    </header>
+                    <img src="/images/05.jpg" alt="Post 1">
+                    <p>Nam tempor turpis et urna sagittis pharetra. Nullam molestie lorem non arcu venenatis, non imperdiet neque venenatis. Praesent sed dignissim velit. Nam vel lorem velit. Aliquam eget neque pretium, placerat magna at, consectetur arcu. In ac feugiat quam. Fusce consequat pellentesque lacinia. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam fermentum, lacus sed aliquam auctor, dui diam porta ipsum, eget luctus elit est sit amet magna</p>
+                    <footer>
+                        <a class="readmore" href="single-post.html">Read More</a>
+                    </footer>
+                </article>
                 
-                <li><a class="tag-block tag-block--html" href="main.html">Main</a></li>
-
-                <li><a class="tag-block tag-block--rails" href="aside.html">Aside</a></li>
-                <li><a class="tag-block tag-block--sass" href="figure.html">Figure</a></li>
-
-                <li><a class="tag-block tag-block--js" href="relative.html">Relative</a></li>
-
-                <li><a class="tag-block tag-block--rails" href="absolute.html">Absolute</a></li>
-                
-                <li><a class="tag-block tag-block--css" href="parent.html">Parent</a></li>
-
-                <li><a class="tag-block tag-block--sass" href="gallery.html">Gallery</a></li>
-                
-                <li><a class="tag-block tag-block--js" href="menu.html">Menu</a></li>
-                
-                <li><a class="tag-block tag-block--js" href="animated.html">Animated</a></li>
-                
-        </ul>
-
-
+                <article>
+                    <header>
+                        <h2>Every web designer needs to understand</h2>
+                        <div class="meta">
+                            Posted By <strong>Janus Nic 1 Day Ago</strong> <span>(2 Comments)</span>
+                        </div><!-- meta-->
+                    </header>
+                    <img src="/images/05.jpg" alt="Post 1">
+                    <p>Cras quis nunc ut turpis malesuada consectetur. Ut ligula nibh, imperdiet id velit elementum, auctor sodales dolor. Nunc lobortis est in libero lacinia, vel consequat est blandit. Fusce sodales augue mauris, at suscipit neque viverra ut. Mauris eget pulvinar est. Duis libero libero, facilisis vitae odio sed, gravida cursus lorem. Aliquam pellentesque auctor porttitor. Cras varius bibendum sapien ut ultricies. Nullam neque urna, placerat in aliquam vel, condimentum sed erat. Donec vitae neque eu justo lobortis viverra. Fusce mi lacus</p>
+                    <footer>
+                        <a class="readmore" href="single-post.html">Read More</a>
+                    </footer>
+                </article>
+            </section>
+        
+        </main>
+        </div>
         <div class="cf"></div>
         <footer class="footer">
             <div class="container">
@@ -104,7 +193,7 @@
                 </div>
             </div>
 		</footer>
-        
+                
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;

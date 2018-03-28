@@ -16,39 +16,18 @@
         <link rel="stylesheet" href="/css/main.css">
 
         <style>
-            /* Banner */
-           .header {
-                background-color: #666666;
-                background-size: cover;
-                background-position: center center;
-                background-repeat: no-repeat;
-                color: #d8d8d8;
-                padding: 14em 0;
-                text-align: center;
+           .relative1 {
                 position: relative;
+                background-color: rgb(15, 216, 82);
             }
+            .relative2 {
+                position: relative;
+                background-color: rgb(230, 7, 93);
+     
+                /* top: -20px;
+                left: 20px; */
 
-            .banner {
-                background-image: url("/images/1.jpg");
-            }
-
-            .header h2 {
-                color: #ffffff;
-                font-size: 3.5em;
-                line-height: 1em;
-                margin: 0 0 0.5em 0;
-                padding: 0;
-            }
-
-            .header p {
-                font-size: 1.5em;
-                color: #ffffff;
-                margin-bottom: 2em;
-            }
-
-            .header p a {
-                color: #ffffff;
-                text-decoration: none;
+                width: 500px;
             }
 
         </style>
@@ -67,88 +46,22 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <header class="header banner">
-            <article>
-                <hgroup>
-                    <h2>Awesome Product</h2>
-                </hgroup>
-                <p>Dat product subline is so nice it blows your mind. <a href="#">Order yours now!</a></p>
-                    <ul class="actions">
-                        <li><a href="#content" class="button special">Sign Up</a></li>
-                        <li><a href="#elements" class="button alt">Learn More</a></li>
-                    </ul>
-            </article>
-        </header>
-
-            
+        
         <article class="container">
                 <div class="row">
-                    <h2 class="align-center">Gallery</h2>
+                    <h2 class="align-center">Relative</h2>
                 </div>
         </article>
         <div class="cf"></div>
         <div class="container">
             <div class="row">
-
-                  <ul class="gallery caption-hover">
-                    <li class="col-s-4">
-                        <figure>
-                            <img src="/images/04.jpg" alt="img04">
-                            <figcaption>
-                                <h3>Kiev</h3>
-                                <div class="cf"></div>
-                                <a href="#">Take a look</a>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="col-s-4">
-                            <figure>
-                                <img src="/images/01.jpg" alt="img01">
-                                <figcaption>
-                                    <h3>Kiev</h3>
-                                    <a href="#">Take a look</a>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li class="col-s-4">
-                            <figure>
-                                <img src="/images/02.jpg" alt="img02">
-      
-                                <figcaption>
-                                    <h3>Kiev</h3>
-                                    <a href="#">Take a look</a>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li class="col-s-4">
-                            <figure>
-                                <img src="/images/05.jpg" alt="img05">
-                                <figcaption>
-                                    <h3>Kiev</h3>
-                                    <a href="#">Take a look</a>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li class="col-s-4">
-                            <figure>
-                                <img src="/images/03.jpg" alt="img03">
-      
-                                <figcaption>
-                                    <h3>Kiev</h3>
-                                    <a href="#">Take a look</a>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li class="col-s-4">
-                            <figure>
-                                <img src="/images/06.jpg" alt="img06">
-                                <figcaption>
-                                    <h3>Kiev</h3>
-                                    <a href="#">Take a look</a>
-                                </figcaption>
-                            </figure>
-                        </li>
-                  </ul>
+                <div class="relative1">
+                    relative ведет себя в точности как static но лишь до тех пор, пока вы не добавите некоторые дополнительные свойства.
+                </div>
+                            
+                <div class="relative2">
+                    Добавление свойств top, right, bottom, и left изменяет позицию элемента, сдвигая его в ту или иную сторону относительно его начального расположения. Другой контент не будет перестраиваться, чтобы заполнить любое свободное пространство, оставленное этим элементом.
+                </div>
             </div>
         </div>    
         <div class="cf"></div>
