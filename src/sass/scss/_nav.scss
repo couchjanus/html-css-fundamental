@@ -5,7 +5,7 @@ nav {
 
 nav ul li {
     display: inline-block;
-    float: left;
+    // float: left;
 }
 
 nav ul li:not(:first-child) {
@@ -29,7 +29,7 @@ nav ul li a:hover {
 @media screen and (max-width: 37.5em) {
 
 .nav-container {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
@@ -42,7 +42,7 @@ nav ul li a:hover {
 }
 
 .nav-container ul {
-    position: absolute;
+    position: fixed;
     top: 50%; 
     transform: translateY(-50%);
     width: 100%;
@@ -69,6 +69,9 @@ nav ul li a:hover {
 .nav-container ul li:nth-child(4) a {
     transition-delay: 0.5s;
 }
+.nav-container ul li:nth-child(5) a {
+    transition-delay: 0.6s;
+}
 .nav-container ul li:not(:first-child) {
     margin-left: 0;
 }
@@ -76,7 +79,7 @@ nav ul li a:hover {
     padding: 10px 25px;
     opacity: 0;
     color: #fff;
-    font-size: 24px;
+    font-size: 1.6rem;
     font-weight: 600;
     transform: translateY(-20px);
     transition: all 0.2s ease;
