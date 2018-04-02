@@ -1,0 +1,333 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link type="text/plain" rel="author" href="/humans.txt" />
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <link rel="stylesheet" href="/css/main.css">
+
+        <style>
+
+            * {
+  box-sizing: border-box;
+}
+
+body {
+  background: #ccc;
+  min-width: 320px;
+}
+
+h2 {
+  text-align: center;
+  margin: 50px 0;
+  color: #555;
+  font-size: 47px;
+  font-family: 'Quicksand', sans-serif;
+}
+@media (max-width: 540px) {
+  h2 {
+    font-size: 28px;
+    margin: 30px 0;
+  }
+}
+
+form {
+  padding: 0 10%;
+}
+form section {
+  width: calc(50% - 40px);
+  padding: 20px;
+  background: #aaa;
+  margin: 20px;
+  border-radius: 5px;
+}
+form section.left {
+  float: left;
+}
+form section.right {
+  float: right;
+}
+form section .input-container {
+  padding: 10px;
+}
+form section .input-container label {
+  display: block;
+  margin-bottom: 4px;
+  color: white;
+  font-size: 16px;
+  text-shadow: 0px 2px 1px #c9ceca;
+  font-family: 'Quicksand', sans-serif;
+}
+form section .input-container input,
+form section .input-container textarea {
+  width: 100%;
+  padding: 5px 10px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background: #eee;
+  box-shadow: 0 2px 0px #c9ceca;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  color: #757575;
+}
+form section .input-container input:focus,
+form section .input-container textarea:focus {
+  outline: none;
+  background: white;
+}
+form section .input-container textarea {
+  height: 122px;
+  padding: 15px 10px;
+  resize: none;
+}
+form .send-container {
+  float: right;
+  width: 100%;
+  text-align: right;
+  margin-right: 20px;
+}
+form .send-container input {
+  background: #555;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+form .send-container input:hover {
+  background: #393a39;
+}
+form:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+@media (max-width: 992px) {
+  form {
+    padding: 0 5%;
+  }
+}
+@media (max-width: 768px) {
+  form {
+    margin-bottom: 50px;
+  }
+  form section {
+    width: 100%;
+    margin: 0;
+  }
+  form section.left {
+    margin-bottom: -30px;
+  }
+  form .send-container {
+    margin-right: 0;
+    margin-top: 15px;
+  }
+  form .send-container input {
+    width: 100%;
+  }
+}
+
+        </style>
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+        <!-- Add your site or application content here -->
+        <nav>
+                <input type="checkbox" id="nav" class="hidden"/>
+                <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+                <div class="nav-container">
+                    <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="landing.html">Landing</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+                  
+
+
+        <div class="row">
+                <div class="col-12">
+                    <h2>Simple responsive form</h2>
+
+                    <form action="">
+                      <section class="left">
+                        <div class="input-container">
+                          <label for="name">Name</label>
+                          <input type="text" />
+                        </div>
+                        <div class="input-container">
+                          <label for="age" required>Age</label>
+                          <input type="number" placeholder="Number field"/>
+                        </div>
+                        <div class="input-container">
+                          <label for="phone">Phone</label>
+                          <input type="text" />
+                        </div>
+                        <div class="input-container">
+                          <label for="email">Email</label>
+                          <input type="email" spellcheck="false" placeholder="Email field" required />
+                        </div>
+                        <div class="input-container">
+                            <label for="email">Website URL</label>
+                            <input type="url" placeholder="URL field" />
+                        </div>
+                        <!--///////////////// SELECT MENU ///////////////////-->
+                        <div class="input-container">
+                            <div class="label">Multiple choice:</div>
+                            <select id="select1" name="select1"> 
+                                <option value="First Choice">First Choice</option>
+                                <option value="Second Choice">Second Choice</option>
+                                <option value="Third Choice">Third Choice</option>
+                              </select>
+                        </div>
+                    
+                        <!--///////////////// CHECKBOX GROUP ///////////////////-->
+                        <div class="input-container">
+                            <div class="label">Multiple choice:</div>
+                        
+                              <div class="field">
+                                <div>
+                                  <input id="check1" name="check1" type="checkbox" value="First Choice">
+                                  <label class="check" for="check1">First Choice</label>
+                                </div>
+                                <div>
+                                  <input id="check2" name="check2" type="checkbox" value="Second Choice">
+                                  <label class="check" for="check2">Second Choice</label>
+                                </div>
+                                <div>
+                                  <input id="check3" name="check3" type="checkbox" value="Third Choice">
+                                  <label class="check" for="check3">Third Choice</label>
+                              </div>
+                            </div>
+                          </div>
+                      </section>
+                      <section class="right">
+                        <div class="input-container">
+                          <label for="address">Address</label>
+                          <input type="text" />
+                        </div>
+                        <div class="input-container">
+                          <label for="address">Phone<span>(opcional)</span></label>
+                          <input type="tel" value="" placeholder="Tel field" />
+                        </div>
+                        <div class="input-container">
+                            <label for="address">Birthday<span>(opcional)</span></label>
+                            <input type="datetime-local" />
+                          </div>
+                      <!--///////////////// TEXTAREA ///////////////////-->
+                          <div class="input-container">
+                          <label for="comments" rows="10" cols="50">Comments</label>
+                          <textarea name="comments" id=""></textarea>
+                        </div>
+                    
+                        
+                    
+                        <!--///////////////// RADIO GROUP ///////////////////-->
+                        <div class="input-container">
+                            <div class="label">Single choice:</div>
+                            <div>
+                                <input id="radio1" name="radio" type="radio" value="First Choice" checked="checked">
+                                <label for="radio1">First Choice</label>
+                              </div>
+                              <div>     
+                                <input id="radio2" name="radio" type="radio" value="Second Choice">
+                                <label for="radio2">Second Choice</label>
+                              </div>
+                        
+                              <div>
+                                <input id="radio3" name="radio" type="radio" value="Third Choice">
+                                <label for="radio3">Third Choice</label>
+                              </div>
+                            </div>
+                        </div>
+                    
+                        
+                    
+                      </section>
+                    
+                    
+                      <div class="send-container">
+                        <input type="submit" value="Send" onclick="return true"/>
+                      </div>
+                    
+                    
+                    </form>
+                    
+                </div>
+        </div>
+        
+            
+        <div class="cf"></div>
+        
+        <footer class="footer">
+                <section class="row mix">
+                    <div class="col-3">
+                        <ul>
+                                        <li><a href="#" class="active">Home</a></li>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a href="#">Resources</a></li>
+                                        <li><a href="#">Terms of Use</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-3">
+                        <ul>
+                                        <li><a href="#" class="active">Web Development</a></li>
+                                        <li><a href="#">Design</a></li>
+                                        <li><a href="#">Cloud & Hosting</a></li>
+                                        <li><a href="#">Gadgets</a></li>
+                                        <li><a href="#">Software</a></li>
+                                        <li><a href="#">SEO & Marketing</a></li>
+                        </ul>
+                    </div>
+                        
+                    <div class="col-3">
+                        <ul>
+                                        <li><a href="#" class="active">Web Development</a></li>
+                                        <li><a href="#">Design</a></li>
+                                        <li><a href="#">Cloud & Hosting</a></li>
+                                        <li><a href="#">Gadgets</a></li>
+                                        <li><a href="#">Software</a></li>
+                                        <li><a href="#">SEO & Marketing</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="col-12">
+                        <p class="copy"> &copy; 2019 Janus Site</p>
+                        <p>
+                                        <!--brand icon-->
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-github-square"></i></a>
+                                        <a href="#"><i class="fab fa-youtube-square"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        </p>
+                    </div>
+                </section>
+            </footer>
+    
+      <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>

@@ -14,58 +14,63 @@
         <!-- Place favicon.ico in the root directory -->
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
         <style>
 
-            /* featured */
+body{background:lightgray}
+.panel-table .panel-body{
+  padding:0;
+}
 
-            .featured-row {
-                position: relative;
-                margin: 2em auto;
-                overflow: hidden;
-            }
+.panel-table .panel-body .table-bordered{
+  border-style: none;
+  margin:0;
+}
 
-            .featured-row__inner {
-                position: absolute;
-                left: 0;
-                top: 0;
-                right: 0;
-                bottom: 0
-            }
+.panel-table .panel-body .table-bordered > thead > tr > th:first-of-type {
+    text-align:center;
+    width: 100px;
+}
 
-            .featured {
-                padding-top: 1em;
-                position: relative;
-                overflow: hidden;
-                text-align: center;
-                width: 120px;
-                height: 120px;
-                border-radius: 50%;
-                background: white;
-            }
+.panel-table .panel-body .table-bordered > thead > tr > th:last-of-type,
+.panel-table .panel-body .table-bordered > tbody > tr > td:last-of-type {
+  border-right: 0px;
+}
 
-            .featured:hover {
-                background: rgb(3, 85, 112);
-                color: white;
-            }
-            .featured:hover p{
-                color: white;
-            }
-            .fa-chess, .fa-coffee, .fa-angular{
-                color: lightblue;
+.panel-table .panel-body .table-bordered > thead > tr > th:first-of-type,
+.panel-table .panel-body .table-bordered > tbody > tr > td:first-of-type {
+  border-left: 0px;
+}
 
-            }
+.panel-table .panel-body .table-bordered > tbody > tr:first-of-type > td{
+  border-bottom: 0px;
+}
 
-            .fa-chess:hover, .fa-coffee:hover, .fa-angular:hover{
-                color: white;
-            }
+.panel-table .panel-body .table-bordered > thead > tr:first-of-type > th{
+  border-top: 0px;
+}
 
-            .featured p {
-                color: rgb(3, 85, 112);
-                font-size: 1rem;
-            }
+.panel-table .panel-footer .pagination{
+  margin:0; 
+}
 
+/*
+used to vertically center elements, may need modification if you're not using default sizes.
+*/
+.panel-table .panel-footer .col{
+ line-height: 34px;
+ height: 34px;
+}
 
+.panel-table .panel-heading .col h3{
+ line-height: 30px;
+ height: 30px;
+}
+
+.panel-table .panel-body .table-bordered > tbody > tr > td{
+  line-height: 34px;
+}
         </style>
     </head>
     <body>
@@ -74,54 +79,51 @@
         <![endif]-->
         <!-- Add your site or application content here -->
         <nav>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="landing.html">Landing</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+                <input type="checkbox" id="nav" class="hidden"/>
+                <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+                <div class="nav-container">
+                    <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="landing.html">Landing</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+                  
 
-        <div class="row">
-            <div class="col-12">
-                <h2>Product is so awesome.</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere temporibus omnis illum, officia. Architecto voluptatibus commodi voluptatem perspiciatis eos possimus, eius at molestias quaerat magnam? Odio qui quos ipsam natus.</p>
-            </div>
-        </div>
-    
-        <section class="row">
+            <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
             
-            <article class="featured-row">
-              <div class="featured-row_inner ">
-      
-                    <div class="col-3 featured">
-                      <i class="fas fa-chess fa-5x"></i>
-                      <p>
-                        Product so awesome. Make your choose - buy now. Super cheap deal!
-                      </p>
-                    </div>
-      
-                    <div class="col-3 featured">
-                      <i class="fab fa-angular fa-5x"></i>
-                      <p>
-                        Product so great. Makes you even greater - go buy now. Super cheap deal!
-                      </p>
-                    </div>
-      
-                    <div class="col-3 featured">
-                      <i class="fas fa-coffee fa-5x"></i>
-                      <p>
-                        Feel lonely? Go buy product and have a friend. Product so great - go buy now!
-                      </p>
-                    </div>
-      
-                  </div>
-                </article>
-              
-            </section>
-      
-        
         <div class="cf"></div>
         
         <footer class="footer">
@@ -171,7 +173,10 @@
                     </div>
                 </section>
             </footer>
-    
+            
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;

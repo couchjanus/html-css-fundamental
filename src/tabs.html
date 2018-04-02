@@ -1,0 +1,285 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link type="text/plain" rel="author" href="/humans.txt" />
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <link rel="stylesheet" href="/css/main.css">
+
+        <style>
+
+
+.tabs{
+  min-width: 320px;
+  max-width: 900px;
+  padding: 50px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.tabs p {
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+
+.tabs section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+}
+
+.tabs input {
+  display: none;
+}
+
+
+.tabs label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+}
+
+.tabs label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+.tabs label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+.tabs input:checked + .tabs label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid orange;
+  border-bottom: 1px solid #fff;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+  display: block;
+}
+
+@media screen and (max-width: 720px) {
+  .tabs label span {
+    font-size: 0;
+  }
+
+  .tabs label span:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .tabs label span{
+    padding: 15px;
+  }
+}
+
+/********** картинка слева **********/
+.to_left {
+  float: left;
+  margin: 0 1em 1em 0;
+  border-radius: 20px;
+}
+
+/********** картинка справа **********/
+.to_right {
+  float: right;
+  margin: 0 0 1em 1em;
+  border-radius: 20px;
+}
+
+/********** картинка между текста **********/
+.columns {
+  float: left;
+  max-width: 30%;
+  margin: 0;
+}
+
+.img-center {
+  float: left;
+  margin: 0 1.5% 0 1.5%;
+  max-width: 37%;
+}
+
+/********** картинка по центру********* */
+.to_center {
+  display: block;
+  margin: 0 auto 1.5%;
+}
+
+
+        </style>
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+        <!-- Add your site or application content here -->
+        <nav>
+                <input type="checkbox" id="nav" class="hidden"/>
+                <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+                <div class="nav-container">
+                    <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="landing.html">Landing</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+                  
+
+
+        <div class="row">
+                
+                        <div class="row container--small">
+                          <hgroup class="align-center">
+                            <h1>Make Your Choice!</h1>
+                          </hgroup>
+                    
+                          <div class="tabs">
+                    
+                            <input id="tab1" type="radio" name="tabs" checked>
+                            <label for="tab1"><i class="fas fa-home fa-fw" style="background:MistyRose"></i><span> Black Cats</span></label>
+                    
+                            <input id="tab2" type="radio" name="tabs">
+                            <label for="tab2"><i class="fas fa-book fa-fw" style="background:MistyRose"></i><span> Red Cats</span></label>
+                    
+                            <input id="tab3" type="radio" name="tabs">
+                            <label for="tab3"><i class="fas fa-pencil-alt fa-fw" style="background:MistyRose"></i><span> Green Cats</span></label>
+                    
+                            <input id="tab4" type="radio" name="tabs">
+                            <label for="tab4"><i class="fas fa-cog fa-fw" style="background:MistyRose"></i><span> Gray Cats</span></label>
+                    
+                            <section id="content1">
+                              <p>
+                                Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
+                              </p>
+                              <img class="to_left" src="/images/01.jpg">
+                              <p>
+                                Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
+                                Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
+                              </p>
+                            </section>
+                    
+                            <section id="content2">
+                              <p>
+                                Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
+                              </p>
+                              <img class="to_right" src="/images/02.jpg">
+                              <p>
+                                Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
+                              </p>
+                            </section>
+                    
+                            <section id="content3">
+                              <p>
+                                Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
+                              </p>
+                              <span  class="action to_left">
+                                <img src="/images/03.jpg">
+                              </span>
+                              
+                              <p>
+                                Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
+                                Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
+                              </p>
+                            </section>
+                    
+                            <section id="content4">
+                              <p>
+                                Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
+                              </p>
+                              <img class="to_right" src="/images/04.jpg">
+                              <p>
+                                Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
+                              </p>
+                            </section>
+                    
+                          </div>
+                   
+                          </article>
+                    
+                                            
+              
+           </div>
+        
+            
+        <div class="cf"></div>
+        
+        <footer class="footer">
+                <section class="row mix">
+                    <div class="col-3">
+                        <ul>
+                                        <li><a href="#" class="active">Home</a></li>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a href="#">Resources</a></li>
+                                        <li><a href="#">Terms of Use</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-3">
+                        <ul>
+                                        <li><a href="#" class="active">Web Development</a></li>
+                                        <li><a href="#">Design</a></li>
+                                        <li><a href="#">Cloud & Hosting</a></li>
+                                        <li><a href="#">Gadgets</a></li>
+                                        <li><a href="#">Software</a></li>
+                                        <li><a href="#">SEO & Marketing</a></li>
+                        </ul>
+                    </div>
+                        
+                    <div class="col-3">
+                        <ul>
+                                        <li><a href="#" class="active">Web Development</a></li>
+                                        <li><a href="#">Design</a></li>
+                                        <li><a href="#">Cloud & Hosting</a></li>
+                                        <li><a href="#">Gadgets</a></li>
+                                        <li><a href="#">Software</a></li>
+                                        <li><a href="#">SEO & Marketing</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="col-12">
+                        <p class="copy"> &copy; 2019 Janus Site</p>
+                        <p>
+                                        <!--brand icon-->
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-github-square"></i></a>
+                                        <a href="#"><i class="fab fa-youtube-square"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        </p>
+                    </div>
+                </section>
+            </footer>
+    
+      <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
