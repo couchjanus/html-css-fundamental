@@ -11,83 +11,166 @@
 
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
-        <!-- Place favicon.ico in the root directory -->
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="/css/main.css">
+    <style>
 
-        <style>
+/* Flex styles -------------------------------------------------*/
+header {
+  display: flex;
+  align-items: center;
+}
 
-            .container {
-                max-width: 100%;
-                margin-left: auto;
-                margin-right: auto;
-                width: 90%
-            }
-            .card {
-                height: 150px;
-                position: relative;
-                width: 300px;
-                float: right;
-                margin: 20px;
-                padding: 5px;
-            }
-        </style>
-    </head>
-    <body>
-        <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-        <!-- Add your site or application content here -->
+@media (min-width: 700px) {
+ .leading {
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+/* Grid styles -------------------------------------------------*/
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+
+/* Generic styles ----------------------------------------------*/
+
+header {
+  padding: 10px;
+  font-size: 2em;
+  color: white;
+  background-color: #333;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 20px;
+}
+
+.leading {
+  height: 240px;
+  margin-bottom: 30px;
+  padding: 30px;
+  color: white;
+  background: url('/images/bg.jpg') center #333 no-repeat;
+  background-size: cover;
+  color: white;
+  text-shadow: 0px 0px 5px #000;
+}
+
+.leading-bigtext {
+  margin-right: 60px;
+  font-weight: bold;
+  font-size: 24vw;
+}
+
+@media (min-width: 700px) {
+  .leading-bigtext {
+    font-size: 140px;
+  }
+}
+
+.leading-text {
+  max-width: 900px;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+
+.cards {
+  max-width: 960px;
+  margin: 0 auto 30px;
+}
+
+article {
+  position: relative;
+}
+
+.article-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.article-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+</style>
+ 
+
+</head>
+
+<body>
         <nav>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="landing.html">Landing</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        
-
-        <section>
-                <article class="container">
-                    <hgroup>
-                        <h2>Lorem ipsum dolor sit amet</h2>
-                        Published at <time datetime="2018-03-22T13:59:47-04:00" pubdate>
-                                March 22, 2018 1:59pm EDT
-                        </time>
-                    </hgroup>
-            
-                    <div>
-                            New consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                    
-                    <div class="card">
-                        <img src="/images/05.jpg"/>
-                    </div>
-     
-                    <div>
-                        New consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                </article>
-              
-        </section>
-            
-        <footer>
-            <p class="copyright"> &copy; 2019 Janus Site</p>
-            <nav>
-                <!--brand icon-->
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-github-square"></i></a>
-                <a href="#"><i class="fab fa-youtube-square"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <input type="checkbox" id="nav" class="hidden"/>
+                <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+                <div class="nav-container">
+                    <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="landing.html">Landing</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
             </nav>
-        </footer>
-      <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-        <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-    </body>
+            <header>
+                    <h1 class="heading">Grid into the future</h1>
+            </header>
+                  
+                  <main>
+                    <section class="leading">
+                      <p class="leading-bigtext">Hello</p>
+                      <p class="leading-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper quam. Praesent lobortis tellus quis erat condimentum, a bibendum tortor volutpat.</p>
+                    </section>
+                    <section class="cards">
+                      <article>
+                        <img class="article-img" src="/images/cat1.jpg" alt=" " />
+                        <h1 class="article-title">
+                          Title of article
+                        </h1>
+                      </article>
+                      <article>
+                        <img class="article-img" src="/images/cat2.jpg" alt=" " />
+                        <h1 class="article-title">
+                          Title of article
+                        </h1>
+                      </article>
+                      <article>
+                        <img class="article-img" src="/images/cat3.jpg" alt=" " />
+                        <h1 class="article-title">
+                          Title of article
+                        </h1>
+                      </article>
+                      <article>
+                        <img class="article-img" src="/images/cat4.jpg" alt=" " />
+                        <h1 class="article-title">
+                          Title of article
+                        </h1>
+                      </article>
+                      <article>
+                        <img class="article-img" src="/images/cat5.jpg" alt=" " />
+                        <h1 class="article-title">
+                          Title of article
+                        </h1>
+                      </article>
+                      <article>
+                        <img class="article-img" src="/images/cat6.jpg" alt=" " />
+                        <h1 class="article-title">
+                          Title of article
+                        </h1>
+                      </article>
+                    </section>
+                  </main>
+</body>
 </html>

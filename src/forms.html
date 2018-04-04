@@ -17,127 +17,107 @@
 
         <style>
 
-            * {
-  box-sizing: border-box;
-}
-
-body {
-  background: #ccc;
-  min-width: 320px;
-}
-
-h2 {
-  text-align: center;
-  margin: 50px 0;
-  color: #555;
-  font-size: 47px;
-  font-family: 'Quicksand', sans-serif;
-}
-@media (max-width: 540px) {
-  h2 {
-    font-size: 28px;
-    margin: 30px 0;
-  }
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 form {
-  padding: 0 10%;
+  width: 75%;
+  max-width: 1000px;
+  min-width: 400px;
+  padding: 2em;
+  background: #5abc9b;
+  border-radius: 0.25em;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
 }
-form section {
-  width: calc(50% - 40px);
-  padding: 20px;
-  background: #aaa;
-  margin: 20px;
-  border-radius: 5px;
+
+input,
+select,
+textarea {
+  padding: 0.5em;
+  color: #333;
+  font-size: 0.875em;
+  font-family: inherit;
+  background: #f4f4f4;
+  border: 1px solid #CCC;
+  border-width: 1px 1px 1px 0;
+  border-radius: 0;
+  appearance: textfield;
+  transition: 0.3s;
 }
-form section.left {
-  float: left;
+
+input:focus,
+select:focus,
+textarea:focus {
+  background: #FFF;
+  box-shadow: inset 0.1em 0.1em 0.25em rga(0, 0, 0, 0.2);
+  outline: 0;
 }
-form section.right {
-  float: right;
+
+.form-field {
+  display: flex;
+  margin-bottom: 1em;
 }
-form section .input-container {
-  padding: 10px;
+.form-field label {
+  flex: 0 1 7em;
+  padding: 1em;
+  background: #FFF;
+  border: 1px solid #CCC;
+  color: #2d2d2d;
+  font-weight: 400;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  text-align: center;
+  text-shadow: 0 1px 0 #FFF;
+  lint-height: 1;
 }
-form section .input-container label {
-  display: block;
-  margin-bottom: 4px;
-  color: white;
-  font-size: 16px;
-  text-shadow: 0px 2px 1px #c9ceca;
-  font-family: 'Quicksand', sans-serif;
+.form-field input,
+.form-field select,
+.form-field textarea {
+  flex: 1;
 }
-form section .input-container input,
-form section .input-container textarea {
-  width: 100%;
-  padding: 5px 10px;
-  height: 40px;
-  border-radius: 5px;
-  border: none;
-  background: #eee;
-  box-shadow: 0 2px 0px #c9ceca;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 16px;
-  color: #757575;
-}
-form section .input-container input:focus,
-form section .input-container textarea:focus {
-  outline: none;
-  background: white;
-}
-form section .input-container textarea {
-  height: 122px;
-  padding: 15px 10px;
-  resize: none;
-}
-form .send-container {
-  float: right;
-  width: 100%;
-  text-align: right;
-  margin-right: 20px;
-}
-form .send-container input {
-  background: #555;
-  border: none;
-  color: white;
-  padding: 15px 30px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-form .send-container input:hover {
-  background: #393a39;
-}
-form:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-@media (max-width: 992px) {
-  form {
-    padding: 0 5%;
+@media screen and (max-width: 720px) {
+  .form-field {
+    flex-wrap: wrap;
   }
-}
-@media (max-width: 768px) {
-  form {
-    margin-bottom: 50px;
+  .form-field label {
+    flex: 1;
   }
-  form section {
-    width: 100%;
-    margin: 0;
-  }
-  form section.left {
-    margin-bottom: -30px;
-  }
-  form .send-container {
-    margin-right: 0;
-    margin-top: 15px;
-  }
-  form .send-container input {
-    width: 100%;
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    flex: 1 1 100%;
+    padding: 1em;
   }
 }
 
+.submit-field {
+  flex-direction: row-reverse;
+}
+.submit-field button {
+  flex: 0 1 40%;
+  margin-top: 10px;
+  padding: 0.7em;
+  color: #f2f2f2;
+  font-size: 1rem;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  text-shadow: 0 1px 0 #FFF;
+  background: #2c8a6a;
+  border-radius: 0.25em;
+  border: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+@media screen and (max-width: 720px) {
+  .submit-field button {
+    flex: 0 1 100%;
+  }
+}
         </style>
     </head>
     <body>
@@ -161,116 +141,73 @@ form:after {
                   
 
 
-        <div class="row">
-                <div class="col-12">
-                    <h2>Simple responsive form</h2>
-
-                    <form action="">
-                      <section class="left">
-                        <div class="input-container">
-                          <label for="name">Name</label>
-                          <input type="text" />
-                        </div>
-                        <div class="input-container">
-                          <label for="age" required>Age</label>
-                          <input type="number" placeholder="Number field"/>
-                        </div>
-                        <div class="input-container">
-                          <label for="phone">Phone</label>
-                          <input type="text" />
-                        </div>
-                        <div class="input-container">
-                          <label for="email">Email</label>
-                          <input type="email" spellcheck="false" placeholder="Email field" required />
-                        </div>
-                        <div class="input-container">
-                            <label for="email">Website URL</label>
-                            <input type="url" placeholder="URL field" />
-                        </div>
-                        <!--///////////////// SELECT MENU ///////////////////-->
-                        <div class="input-container">
-                            <div class="label">Multiple choice:</div>
-                            <select id="select1" name="select1"> 
-                                <option value="First Choice">First Choice</option>
-                                <option value="Second Choice">Second Choice</option>
-                                <option value="Third Choice">Third Choice</option>
-                              </select>
-                        </div>
-                    
-                        <!--///////////////// CHECKBOX GROUP ///////////////////-->
-                        <div class="input-container">
-                            <div class="label">Multiple choice:</div>
-                        
-                              <div class="field">
-                                <div>
-                                  <input id="check1" name="check1" type="checkbox" value="First Choice">
-                                  <label class="check" for="check1">First Choice</label>
-                                </div>
-                                <div>
-                                  <input id="check2" name="check2" type="checkbox" value="Second Choice">
-                                  <label class="check" for="check2">Second Choice</label>
-                                </div>
-                                <div>
-                                  <input id="check3" name="check3" type="checkbox" value="Third Choice">
-                                  <label class="check" for="check3">Third Choice</label>
-                              </div>
-                            </div>
-                          </div>
-                      </section>
-                      <section class="right">
-                        <div class="input-container">
-                          <label for="address">Address</label>
-                          <input type="text" />
-                        </div>
-                        <div class="input-container">
-                          <label for="address">Phone<span>(opcional)</span></label>
-                          <input type="tel" value="" placeholder="Tel field" />
-                        </div>
-                        <div class="input-container">
-                            <label for="address">Birthday<span>(opcional)</span></label>
-                            <input type="datetime-local" />
-                          </div>
-                      <!--///////////////// TEXTAREA ///////////////////-->
-                          <div class="input-container">
-                          <label for="comments" rows="10" cols="50">Comments</label>
-                          <textarea name="comments" id=""></textarea>
-                        </div>
-                    
-                        
-                    
-                        <!--///////////////// RADIO GROUP ///////////////////-->
-                        <div class="input-container">
-                            <div class="label">Single choice:</div>
-                            <div>
-                                <input id="radio1" name="radio" type="radio" value="First Choice" checked="checked">
-                                <label for="radio1">First Choice</label>
-                              </div>
-                              <div>     
-                                <input id="radio2" name="radio" type="radio" value="Second Choice">
-                                <label for="radio2">Second Choice</label>
-                              </div>
-                        
-                              <div>
-                                <input id="radio3" name="radio" type="radio" value="Third Choice">
-                                <label for="radio3">Third Choice</label>
-                              </div>
-                            </div>
-                        </div>
-                    
-                        
-                    
-                      </section>
-                    
-                    
-                      <div class="send-container">
-                        <input type="submit" value="Send" onclick="return true"/>
-                      </div>
-                    
-                    
-                    </form>
-                    
+            <div class="form-container">
+              <form>
+                <h1>Register Now</h1>
+                <div class="form-field multi-input">
+                  <label for="first-name">Name</label>
+                  <input type="text" id="first-name" placeholder="Enter your first name here">
+                  <input type="text" id="last-name" placeholder="Enter your last name here">
                 </div>
-        </div>
+            
+                <div class="form-field input-right">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" placeholder="Enter your email here">
+                </div>
+            
+                <div class="form-field input-right">
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="phone" placeholder="Enter your phone here">
+                </div>
+            
+                <div class="form-field input-right">
+                  <label for="message">Message</label>
+                  <textarea rows="6" id="message" placeholder="Enter your message here"></textarea>
+                </div>
+            
+                <div class="form-field multi-input">
+                  <label for="dob">DOB</label>
+                  <select name="dob_day" id="dob">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                  <select name="dob_month">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                  <select name="dob_year">
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                  </select>
+                </div>
+            
+                <div class="form-field submit-field">
+                  <button type="button">Submit</button>
+                </div>
+              </form>
+            </div>
+            
         
             
         <div class="cf"></div>

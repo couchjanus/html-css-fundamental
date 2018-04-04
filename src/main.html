@@ -14,191 +14,275 @@
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="/css/main.css">
+    <style>
+        body {
+            background-color: #111;
+            color: #EEE;
+        }
 
-        <style>
-            .outline a {
-                border: 1px solid;
-                border-radius: 3px;
-                display: inline-block;
-                margin: 10px;
-                padding: 5px;
-                }
+        * {
+            margin: 0;
+            border: 0;
+        }
 
-            .outline a:focus {
-                
-                outline: solid;
+        #grid {
+            display: grid;
+            height: 100%;
+        }
 
-                /* outline: 4px dotted #e73;
-                outline: dashed red;
-                outline: 1rem solid;
-                outline: thick double #32a1ce; */
-                
-                /* outline: 8px ridge rgba(170, 50, 220, .6);
-                border-radius: 2rem; */
-
-                outline-offset: 4px;
-                background: #ffa;
-
+        @media (orientation: landscape) {
+            #grid {
+                grid-definition-columns: 20px 1fr 10px 300px 20px;
+                grid-template-columns: 20px 1fr 10px 300px 20px;
+                grid-definition-rows: 20px 150px 10px 1fr 10px 150px 20px;
+                grid-template-rows: 20px 150px 10px 1fr 10px 150px 20px;
             }
 
-            .content{
-                float:left;
-                border: 1px solid #ccc;
-                border-radius:10px;
-                padding:0 20px 20px 20px;
+            #title {
+                grid-column: 4;
+                grid-row: 2;
             }
 
-            article{
-                border-bottom:1px dotted #ccc;
-                padding:10px 0 20px 0;
+            #text {
+                grid-column: 4;
+                grid-row: 4;
             }
 
-            article img{
-                width:100%;
+            #main {
+                grid-column: 2;
+                grid-row: 2 / span 3;
             }
 
-            artlce h2{
-                margin:0;
-                padding-top:10px;
+            #photos {
+                grid-column: 2 / span 3;
+                grid-row: 6;
             }
 
-            article .meta{
-                margin:10px 0 10px 0;
-                padding:5px;
-                background:#333;
-                color:#fff;
+            #image-title {
+                line-height: 1.5em;
+                font-size: 2em;
             }
 
-            article .meta span{
-                float:right;
+            #text {
+                font-size: 1em;
+                padding: 20px;
             }
 
-            article .readmore{
-                background:#f4f4f4;
-                color:#000;
-                width:97%;
-                display:block;
-                text-align:center;
-                padding:10px;
-                border:1px solid #ccc;
-                border-radius:10px;
+            #description {
+                font-size: 1.5em;
+                line-height: 1.3em;
+                margin-bottom: 30px;
             }
 
-            article .readmore:hover{
-                background:#ccc;
+            #thumbnails {
+                max-height: 150px;
             }
 
+            .thumbnail {
+                max-height: 130px;
+                margin: 10px 30px 10px 30px;
+            }
+        }
 
-        </style>
-    </head>
-    <body>
-        <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
+        @media (orientation: portrait) {
+            #grid {
+                grid-definition-columns: 20px 200px 10px 1fr 20px;
+                grid-template-columns: 20px 200px 10px 1fr 20px;
+                grid-definition-rows: 20px 100px 10px 1fr 10px 100px 20px;
+                grid-template-rows: 20px 100px 10px 1fr 10px 100px 20px;
+            }
 
-        <!-- Add your site or application content here -->
+            #title {
+                grid-column: 2;
+                grid-row: 2;
+            }
+
+            #text {
+                grid-column: 4;
+                grid-row: 2;
+            }
+
+            #main {
+                grid-column: 2 / span 3;
+                grid-row: 4;
+            }
+
+            #photos {
+                grid-column: 2 /span 3;
+                grid-row: 6;
+            }
+
+            #image-title {
+                line-height: 1.5em;
+                font-size: 2em;
+            }
+
+            #text {
+                font-size: 1em;
+                padding: 10px;
+            }
+
+            #description {
+                font-size: 1.2em;
+                line-height: 1.1em;
+                margin-bottom: 10px;
+            }
+
+            #thumbnails {
+                max-height: 100px;
+            }
+
+            .thumbnail {
+                max-height: 80px;
+                margin: 10px 10px 5px 10px;
+            }
+        }
+
+        .vcenter {
+            display: -webkit-box !important;
+            display: box !important;
+            -webkit-box-orient: vertical;
+            box-orient: vertical;
+            -webkit-box-align: center;
+            box-align: center;
+            -webkit-box-pack: center;
+            box-pack: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        #image {
+            max-width: 90%;
+            max-height: 90%;
+            padding: 5px;
+            border: 15px solid white;
+        }
+
+        #photos {
+            background-color: #CCC;
+            box-shadow: 5px 5px 3px #666;
+            border-radius: 5px;
+        }
+
+        #thumbnails {
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .thumbnail {
+            box-shadow: 5px 5px 3px #CCC;
+            border-radius: 3px;
+            border: 1px solid #111;
+        }
+
+        .thumbnail:hover {
+            border: 1px solid white;
+        }
+
+        #image-title {
+            font-family: Impact, fantasy;
+            text-align: center;
+        }
+
+        #text {
+            font-family: Verdana, sans-serif;
+            color: #000;
+            background-color: #CCC;
+            box-shadow: 5px 5px 3px #666;
+            border-radius: 5px;
+        }
+
+        a {
+            color: #633;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
+ 
+    <script>
+        var images = {
+            "8755627802": {
+                "title": "Lakes close",
+                "description": "CSS Grid Layout Examples.",
+                "img": "/images/cat3.jpg"
+            },
+            "8899898917": {
+                "title": "Balloons",
+                "description": "CSS Grid Layout Examples.",
+                "img": "/images/cat2.jpg"
+            },
+            "9045535798": {
+                "title": "Lucía",
+                "description": "CSS Grid Layout Examples.",
+                "img": "/images/cat1.jpg"
+            },
+            "9281765203": {
+                "title": "Charyn Canyon",
+                "description": "CSS Grid Layout Examples.",
+                "img": "/images/cat2.jpg"
+            },
+            "9476752141": {
+                "title": "Uran Togoo",
+                "description": "CSS Grid Layout Examples.",
+                "img": "/images/cat3.jpg"
+            },
+            "10139131563": {
+                "title": "Graffiti",
+                "description": "CSS Grid Layout Examples.",
+                "img": "/images/cat4.jpg"
+            },
+            "10138806215": {
+                "title": "Kinkakuji",
+                "description": "CSS Grid Layout Examples.",
+                "img": "/images/cat5.jpg"
+            }
+        };
+
+        function loadImage(id) {
+            document.getElementById("image").src = images[id].img;
+            document.getElementById("image-title").innerHTML = images[id].title;
+            document.getElementById("description").innerHTML = images[id].description;
+            document.getElementById("source").href = "http://www.flickr.com/photos/teosaurio/" + id;
+        }
+    </script>
+</head>
+
+<body onload="loadImage(8899898917)";>
         <nav>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="landing.html">Landing</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <!-- Add your site or application content here -->
-        <div class="container"
-        
-        <main class="row">
-            <section class="col-s-9 content" id="">
-                <article>
-                    <header>
-                        <h2>Friend-tracking feature</h2>
-                        <div class="meta">
-                            Posted By <strong>Janus Nic 1 Day Ago</strong> <span>(2 Comments)</span>
-                        </div><!-- meta-->
-                    </header>
-                    <img src="/images/05.jpg" alt="Post 1">
-                    <p>Nam tempor turpis et urna sagittis pharetra. Nullam molestie lorem non arcu venenatis, non imperdiet neque venenatis. Praesent sed dignissim velit. Nam vel lorem velit. Aliquam eget neque pretium, placerat magna at, consectetur arcu. In ac feugiat quam. Fusce consequat pellentesque lacinia. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam fermentum, lacus sed aliquam auctor, dui diam porta ipsum, eget luctus elit est sit amet magna</p>
-                    <footer>
-                        <a class="readmore" href="single-post.html">Read More</a>
-                    </footer>
-                </article>
-                
-                <article>
-                    <header>
-                        <h2>Every web designer needs to understand</h2>
-                        <div class="meta">
-                            Posted By <strong>Janus Nic 1 Day Ago</strong> <span>(2 Comments)</span>
-                        </div><!-- meta-->
-                    </header>
-                    <img src="/images/05.jpg" alt="Post 1">
-                    <p>Cras quis nunc ut turpis malesuada consectetur. Ut ligula nibh, imperdiet id velit elementum, auctor sodales dolor. Nunc lobortis est in libero lacinia, vel consequat est blandit. Fusce sodales augue mauris, at suscipit neque viverra ut. Mauris eget pulvinar est. Duis libero libero, facilisis vitae odio sed, gravida cursus lorem. Aliquam pellentesque auctor porttitor. Cras varius bibendum sapien ut ultricies. Nullam neque urna, placerat in aliquam vel, condimentum sed erat. Donec vitae neque eu justo lobortis viverra. Fusce mi lacus</p>
-                    <footer>
-                        <a class="readmore" href="single-post.html">Read More</a>
-                    </footer>
-                </article>
-            </section>
-        
-        </main>
-        </div>
-        <div class="cf"></div>
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-s-3">
-                        <p class="copy"> &copy; 2019 Janus Site</p>
-                        <p>
-                                <!--brand icon-->
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-github-square"></i></a>
-                                <a href="#"><i class="fab fa-youtube-square"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                        </p>
-                    </div>
-					<div class="col-s-9">
-                        <div class="row">
-                            <div class="col-s-4">
-                                <ul>
-                                    <li><a href="#" class="active">Home</a></li>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Contact Us</a></li>
-                                    <li><a href="#">Resources</a></li>
-                                    <li><a href="#">Terms of Use</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-s-4">
-                                <ul>
-                                    <li><a href="#" class="active">Web Development</a></li>
-                                    <li><a href="#">Design</a></li>
-                                    <li><a href="#">Cloud & Hosting</a></li>
-                                    <li><a href="#">Gadgets</a></li>
-                                    <li><a href="#">Software</a></li>
-                                    <li><a href="#">SEO & Marketing</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-s-4">
-                                <ul>
-                                    <li><a href="#" class="active">Web Development</a></li>
-                                    <li><a href="#">Design</a></li>
-                                    <li><a href="#">Cloud & Hosting</a></li>
-                                    <li><a href="#">Gadgets</a></li>
-                                    <li><a href="#">Software</a></li>
-                                    <li><a href="#">SEO & Marketing</a></li>
-                                </ul>
-                            </div>
-                        </div>
-		    		</div>
+                <input type="checkbox" id="nav" class="hidden"/>
+                <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+                <div class="nav-container">
+                    <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="landing.html">Landing</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
+            </nav>
+    <div id="grid">
+        <div id="title">
+            <h1 id="image-title"></h1>
+        </div>
+        <div id="text">
+            <p id="description"></p>
+            <p>By <a id="source" href="#">Mr Hicks46</a>.</p>
+        </div>
+        <div id="main" class="vcenter">
+            <img id="image" src="/images/cat1.jpg">
+        </div>
+        <div id="photos">
+            <div id="thumbnails">
+                <a href="#" onclick="loadImage(8755627802);"><img id="thumb1" class="thumbnail" src="/images/cat1.jpg"></a>
+                <a href="#" onclick="loadImage(8899898917);"><img id="thumb2" class="thumbnail" src="/images/cat2.jpg"></a>
+                <a href="#" onclick="loadImage(9045535798);"><img id="thumb3" class="thumbnail" src="/images/cat3.jpg"></a>
+                <a href="#" onclick="loadImage(9281765203);"><img id="thumb4" class="thumbnail" src="/images/cat4.jpg"></a>
+                <a href="#" onclick="loadImage(9476752141);"><img id="thumb5" class="thumbnail" src="/images/cat5.jpg"></a>
             </div>
-		</footer>
-                
-        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-        <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-    </body>
+        </div>
+    </div>
+</body>
 </html>

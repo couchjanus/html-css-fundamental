@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hello world</title>
+        <!-- <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/bootstrap.css"> -->
+        <link rel="stylesheet" href="/css/main.css">
+
+        <style>
+
+            .component {
+              max-width: 60em;
+              margin-left: auto;
+              margin-right: auto;
+              padding: 1em;
+            }
+            
+            ul, ol {
+              padding: 0;
+              margin: 0;
+            }
+            
+            .grid {
+              display: grid;
+              grid-template-columns: repeat(12, 1fr);
+              grid-gap: 1em;
+            }
+            
+            .text {
+              grid-column: span 6;
+              grid-row: 1;
+            }
+            
+            .list-of-components {
+              grid-column: span 6 / -1;
+              grid-row: 1 / span 3;
+              display: grid;
+              grid-template-columns: repeat(6, 1fr);
+              grid-gap: 1em;
+            }
+            
+            .list-of-components > ol {
+              grid-column: span 3;
+              list-style-position: inside;
+            }
+            
+            .sneak-peek-text {
+              grid-column: span 6;
+              grid-row: 3;
+            }
+            
+            .examples {
+              grid-column: 1 / -1;
+              display: grid;
+              grid-template-columns: repeat(12, 1fr);
+              grid-gap: 1em;
+            }
+            
+            .examples > li {
+              list-style: none;
+              grid-column: span 3;
+            }
+            
+            img {
+              max-width: 100%;
+            }
+            </style>
+    </head>
+
+    <body>
+            <ul class="flex-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="landing.html">Landing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+        
+      <div class="container">
+            <header>
+            <div class="row">
+                <div class="col-s-12">
+                    <div class="box" id="masthead">
+
+                        <h1>Hello, Grid
+                            <small>(resize to have fun)</small>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+      </div>
+                
+                <h1>Column Grid</h1>
+                <div class="component">
+                    <h3>The 20 components</h3>
+                    <div class="grid">
+                      <div class="text">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod amet perspiciatis, optio voluptates, accusamus maiores libero distinctio quis vero architecto enim saepe numquam, voluptas ea atque autem esse eaque qui.
+                        </p> 
+                      </div>
+                  
+                      <div class="list-of-components">
+                        <ol> 
+                          <li>Item 1</li>
+                          <li>Item 2</li>
+                          <li>Item 3</li>
+                          <li>Item 4</li>
+                          <li>Item 5</li>
+                          <li>Item 6</li>
+                          <li>Item 7</li>
+                          <li>Item 8</li>
+                          <li>Item 9</li>
+                          <li>Item 10</li>
+                        </ol>
+                        <ol> 
+                          <li>Item 11</li>
+                          <li>Item 12</li>
+                          <li>Item 13</li>
+                          <li>Item 14</li>
+                          <li>Item 15</li>
+                          <li>Item 16</li>
+                          <li>Item 17</li>
+                          <li>Item 18</li>
+                          <li>Item 19</li>
+                          <li>Item 20</li>
+                        </ol>
+                      </div>
+                  
+                      <div class="sneak-peek-text"> Here's a sneak peek of the components: </div>
+                  
+                      <ul class="examples">
+                        <li> <img src="https://placehold.it/400x300" alt="Ploceholder picture"> </li>
+                        <li> <img src="https://placehold.it/400x300" alt="Ploceholder picture"> </li>
+                        <li> <img src="https://placehold.it/400x300" alt="Ploceholder picture"> </li>
+                        <li> <img src="https://placehold.it/400x300" alt="Ploceholder picture"> </li>
+                      </ul>
+                    </div>
+                  </div>
+
+            <footer>- Copy left -</footer>
+            <hr />
+    
+
+    </body>
+</html>
