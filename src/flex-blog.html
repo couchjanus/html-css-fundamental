@@ -5,9 +5,53 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Hello blog</title>
-        <!-- <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/css/bootstrap.css"> -->
         <link rel="stylesheet" href="/css/main.css">
+        <style>
+          .content {
+	display: flex;
+}
+
+.blog {
+	margin: 30px 30px auto;
+	padding: 30px;
+	max-width: 700px;
+}
+
+.date {
+	color: #e53054;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+}
+
+.title {
+	color: #2c3e50;
+	font:bold 2.0rem;
+}
+
+.intro {
+	padding: 5px;
+	border-left: 5px solid #1da3a3;
+	margin-left: 5px;
+}
+
+.grid {
+	width: 31%;
+	float: right; 
+	margin: 1.1%;
+}
+
+.text {
+	font:bold 60px 'Raleway', sans-serif;
+	text-transform: uppercase;
+	border-bottom:2px solid #cbcacc;
+	padding: 20px;
+	text-align: center;
+}
+
+.border {
+	border:20px solid #cbcacc;
+}
+        </style>
     </head>
 
     <body>
@@ -19,82 +63,89 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
         <h1>Hello, Flex Blog</h1>
-        <div class="content-posts">
-                <div class="columns-wrap grid-blog">
-                  <div class="post-card blog"><a href="#"><img src="https://placehold.it/500x200" alt="" />
-                      <div class="title-post">
-                        <h2>post title</h2>
-                        <p>#demoro #sumemo #suave #séloko</p>
-                      </div>
-                      <div class="post-exerpt">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                      </div></a></div>
-                  <div class="post-card blog"><a href="#"><img src="https://placehold.it/500x500" alt="" />
-                      <div class="title-post">
-                        <h2>post title </h2>
-                        <p>#demoro #sumemo #suave #séloko</p>
-                      </div>
-                      <div class="post-exerpt">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis fugiat labore officia culpa asperiores. Facilis fugiat labore officia culpa asperiores. Facilis fugiat labore officia culpa asperiores.</p>
-                      </div></a></div>
-                  <div class="post-card blog"><a href="#"><img src="https://placehold.it/500x300" alt="" />
-                      <div class="title-post">
-                        <h2>post title</h2>
-                        <p>#demoro #sumemo #suave #séloko</p>
-                      </div>
-                      <div class="post-exerpt">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, Facilis fugiat. Facilis fugiat labore officia culpa.</p>
-                      </div></a></div>
-                  <div class="post-card blog"><a href="#"><img src="https://placehold.it/500x500" alt="" />
-                      <div class="title-post">
-                        <h2>post title</h2>
-                        <p>#demoro #sumemo #suave #séloko</p>
-                      </div>
-                      <div class="post-exerpt">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis fugiat labore officia culpa asperiores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis fugiat labore officia culpa asperiores.</p>
-                      </div></a></div>
-                  <div class="post-card blog"><a href="#"><img src="https://placehold.it/500x300" alt="" />
-                      <div class="title-post">
-                        <h2>post title</h2>
-                        <p>#demoro #sumemo #suave #séloko</p>
-                      </div>
-                      <div class="post-exerpt">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis fugiat labore officia culpa asperiores.</p>
-                      </div></a></div>
-                  <div class="post-card blog"><a href="#"><img src="https://placehold.it/500x500" alt="" />
-                      <div class="title-post">
-                        <h2>post title</h2>
-                        <p>#demoro #sumemo #suave #séloko</p>
-                      </div>
-                      <div class="post-exerpt">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                      </div></a></div>
-                  <div class="post-card blog"><a href="#"><img src="https://placehold.it/500x500" alt="" />
-                      <div class="title-post">
-                        <h2>post title</h2>
-                        <p>#demoro #sumemo #suave #séloko</p>
-                      </div>
-                      <div class="post-exerpt">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                      </div></a></div>
-                  <div class="post-card blog"><a href="#"><img src="https://placehold.it/500x500" alt="" />
-                      <div class="title-post">
-                        <h2>post title</h2>
-                        <p>#demoro #sumemo #suave #séloko</p>
-                      </div>
-                      <div class="post-exerpt">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis fugiat labore officia culpa asperiores.</p>
-                      </div></a></div>
-                  <div class="post-card blog"><a href="#"><img src="https://placehold.it/500x300" alt="" />
-                      <div class="title-post">
-                        <h2>post title</h2>
-                        <p>#demoro #sumemo #suave #séloko</p>
-                      </div>
-                      <div class="post-exerpt">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis fugiat labore officia culpa asperiores. consectetur  labore officia culpa asperiores.</p>
-                      </div></a></div>
-                </div>
-              </div>
+        
+    <div class="content">
+      <div class="blog border">
+        <time datetime="2017-12-23 20:00" class="date"> 2018 Dec 23
+        </time>
+        <h1 class="title">Photo Gear you must have in 2017
+        </h1> 
+        <!-- tittle of the first blog -->
+        <article>
+          <p class="intro">
+            Compared to last year’s unveiling of the Nikon D5 and D500, the 2017 Consumer Electronics Show didn’t capture quite the same wow factor for photographers. But while most announcements from major manufacturers were a bit thin, there were some interesting developments, especially from the fringes of the industry. Here are a few of the notable photo gadgets, news, and trends we saw at CES this year.
+          </p>
+          <h2>1. Panasonic Lumix GH5 and new lenses
+          </h2>
+          <!-- subtitle of the first blog -->
+          <p>
+            The powerful Lumix GH5 mirrorless camera took home our top tech of CES award, and for good reason. While technically announced last fall at Photokina, it was here at CES that we got our first look at a production model GH5 and its final specifications. The headlining features of this $2,000 flagship camera are 4K video at 60 frames per second and a 6K Photo mode that fires off 18MP sequences at 30fps. Panasonic has thrown in plenty of other goodies for professional filmmakers, like in-camera 4:2:2 10-bit video and simultaneous internal/external recording.
+          </p>
+          <p>
+            Accompanying the GH5 was the announcement of five new lenses: a brand-new 12-60mm f/2.8-4 and updated versions of the 12-35mm f/2.8, 35-100mm f/2.8, 100-300mm f/4-5.6, and 45-200mm f/4-5.6. All the new lenses are weather-sealed and feature new autofocus systems, improved image stabilization, and micro-step irises for smooth aperture adjustments in video.
+          </p>
+          <h2>2. Nikon D5600 is official in the U.S.
+          </h2>
+          <!-- subtitle of the first blog -->
+          <p>
+            While announced in Japan last fall, Nikon held off the official U.S. unveiling of the D5600 until CES. It represents a slight refinement of the D5500 rather than a complete overhaul, but we don’t see that as a bad thing: The D5500 was always a capable DSLR with excellent image quality; a fantastic option among sub-$1,000 cameras. The D5600 gets enhanced touchscreen capabilities and adds Bluetooth Low Energy for sharing images to a phone or tablet without drawing as much power as Wi-Fi.
+          </p>
+          <p>
+            The D5600 starts at $700 for the body only and is available for pre-order.
+          </p>
+          <h2>3. Professional 360 video for less: 
+            Insta360 Pro and Hubblo VR
+          </h2>
+          <!-- subtitle of the first blog -->
+          <p>
+            Professional 360-degree video rigs can cost in the tens of thousands of dollars, but two companies are looking to shake up the industry with high-quality, inexpensive alternatives. The Insta360 Pro and Hubblo VR can shoot 4K video in 3D and 360 degrees. The Hubblo does it for just $1,000, while the InstaPro takes things up to $3,000, but adds options for 8K video and photos.
+          </p>
+          <p>
+            Should these cameras achieve their goal of democratizing 3D 360 video, consumers may soon have much more content to watch on their VR headsets.
+          </p>
+        </article>
+      </div>
+      <div class="blog border">
+        <time datetime="2017-12-23 20:00" class="date"> 2018 Dec 23
+        </time>
+        <h1 class="title">Photo Gear you must have in 2017
+        </h1> 
+        <!-- tittle of the first blog -->
+        <article>
+          <p class="intro">
+            Compared to last year’s unveiling of the Nikon D5 and D500, the 2017 Consumer Electronics Show didn’t capture quite the same wow factor for photographers. But while most announcements from major manufacturers were a bit thin, there were some interesting developments, especially from the fringes of the industry. Here are a few of the notable photo gadgets, news, and trends we saw at CES this year.
+          </p>
+          <h2>1. Panasonic Lumix GH5 and new lenses
+          </h2>
+          <!-- subtitle of the first blog -->
+          <p>
+            The powerful Lumix GH5 mirrorless camera took home our top tech of CES award, and for good reason. While technically announced last fall at Photokina, it was here at CES that we got our first look at a production model GH5 and its final specifications. The headlining features of this $2,000 flagship camera are 4K video at 60 frames per second and a 6K Photo mode that fires off 18MP sequences at 30fps. Panasonic has thrown in plenty of other goodies for professional filmmakers, like in-camera 4:2:2 10-bit video and simultaneous internal/external recording.
+          </p>
+          <p>
+            Accompanying the GH5 was the announcement of five new lenses: a brand-new 12-60mm f/2.8-4 and updated versions of the 12-35mm f/2.8, 35-100mm f/2.8, 100-300mm f/4-5.6, and 45-200mm f/4-5.6. All the new lenses are weather-sealed and feature new autofocus systems, improved image stabilization, and micro-step irises for smooth aperture adjustments in video.
+          </p>
+          <h2>2. Nikon D5600 is official in the U.S.
+          </h2>
+          <!-- subtitle of the first blog -->
+          <p>
+            While announced in Japan last fall, Nikon held off the official U.S. unveiling of the D5600 until CES. It represents a slight refinement of the D5500 rather than a complete overhaul, but we don’t see that as a bad thing: The D5500 was always a capable DSLR with excellent image quality; a fantastic option among sub-$1,000 cameras. The D5600 gets enhanced touchscreen capabilities and adds Bluetooth Low Energy for sharing images to a phone or tablet without drawing as much power as Wi-Fi.
+          </p>
+          <p>
+            The D5600 starts at $700 for the body only and is available for pre-order.
+          </p>
+          <h2>3. Professional 360 video for less: 
+            Insta360 Pro and Hubblo VR
+          </h2>
+          <!-- subtitle of the first blog -->
+          <p>
+            Professional 360-degree video rigs can cost in the tens of thousands of dollars, but two companies are looking to shake up the industry with high-quality, inexpensive alternatives. The Insta360 Pro and Hubblo VR can shoot 4K video in 3D and 360 degrees. The Hubblo does it for just $1,000, while the InstaPro takes things up to $3,000, but adds options for 8K video and photos.
+          </p>
+          <p>
+            Should these cameras achieve their goal of democratizing 3D 360 video, consumers may soon have much more content to watch on their VR headsets.
+          </p>
+        </article>
+      </div>
+    </div>
                   
     </body>
 </html>
